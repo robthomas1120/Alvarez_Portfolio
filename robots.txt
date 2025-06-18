@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Sitemap: https://robthomas1120.github.io/Alvarez_Portfolio/sitemap.xml
