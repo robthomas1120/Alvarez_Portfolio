@@ -18,16 +18,16 @@ const focusAreas = [
       "Image classification, object detection, semantic segmentation, and generative models for visual data processing.",
   },
   {
-    code: "ML_03",
-    title: "Natural Language",
+    code: "DV_01",
+    title: "Data Visualization",
     description:
-      "Text classification, sentiment analysis, named entity recognition, and language models for understanding human language.",
+      "Creating compelling and interactive data visualizations to communicate complex information clearly and effectively.",
   },
   {
-    code: "ML_04",
-    title: "Data Engineering",
+    code: "DV_02",
+    title: "Data Storytelling",
     description:
-      "ETL pipelines, feature engineering, data preprocessing, and scalable data infrastructure for ML systems.",
+      "Transforming complex datasets into engaging narratives that drive decisions and inspire action.",
   },
 ];
 
