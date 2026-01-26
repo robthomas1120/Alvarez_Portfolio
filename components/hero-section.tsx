@@ -6,27 +6,7 @@ import { AnimatedShape } from "@/components/animated-shape";
 export function HeroSection() {
   return (
     <section className="relative min-h-screen overflow-hidden border-b border-border">
-      {/* Grid overlay */}
-      <div className="absolute inset-0">
-        <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern
-              id="hero-grid"
-              width="80"
-              height="80"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M 80 0 L 0 0 0 80"
-                fill="none"
-                stroke="var(--grid-line)"
-                strokeWidth="1"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hero-grid)" />
-        </svg>
-      </div>
+
 
       {/* Decorative labels */}
       <motion.div

@@ -87,7 +87,7 @@ export function AnimatedShape({
             rx="90"
             ry="30"
             stroke="var(--pink)"
-            strokeWidth="1.5"
+            strokeWidth="2.5"
           />
           {/* Vertical lines */}
           {[...Array(9)].map((_, i) => {
@@ -98,7 +98,7 @@ export function AnimatedShape({
                 key={`v-${i}`}
                 d={`M ${x} 100 Q ${x} ${100 - height} ${x} ${100 - height}`}
                 stroke="var(--pink)"
-                strokeWidth="0.5"
+                strokeWidth="1.5"
                 opacity="0.5"
               />
             );
@@ -112,7 +112,7 @@ export function AnimatedShape({
               rx={90 * Math.cos(Math.asin(offset / 80))}
               ry={30 * Math.cos(Math.asin(offset / 80))}
               stroke="var(--pink)"
-              strokeWidth="0.5"
+              strokeWidth="1.5"
               opacity="0.5"
             />
           ))}

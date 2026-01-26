@@ -149,7 +149,7 @@ export function DataVizProjectsSection() {
   return (
     <section className="relative border-b border-border py-24">
       {/* Section labels */}
-      <div className="absolute top-6 left-6 font-mono text-xs text-pink">VISUALIZATIONS</div>
+      <div className="absolute top-6 left-6 font-mono text-xs text-pink">DATA VISUALIZATIONS</div>
       <div className="absolute top-6 right-6 font-mono text-xs text-muted-foreground">
         SECTION_03
       </div>

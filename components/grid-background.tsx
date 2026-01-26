@@ -17,8 +17,12 @@ export function GridBackground() {
     >
       {/* Main grid */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute"
         style={{
+          top: "-50%",
+          left: "-50%",
+          width: "200%",
+          height: "200%",
           x: gridOffsetX,
           y: gridOffsetY,
         }}
@@ -38,7 +42,7 @@ export function GridBackground() {
                 d="M 40 0 L 0 0 0 40"
                 fill="none"
                 stroke="var(--grid-line)"
-                strokeWidth="1.2"
+                strokeWidth="2.0"
               />
             </pattern>
             <pattern
@@ -52,11 +56,11 @@ export function GridBackground() {
                 d="M 160 0 L 0 0 0 160"
                 fill="none"
                 stroke="var(--grid-line)"
-                strokeWidth="2.0"
+                strokeWidth="3.0"
               />
             </pattern>
           </defs>
-          <rect width="200%" height="200%" fill="url(#grid-large)" />
+          <rect width="400%" height="400%" fill="url(#grid-large)" />
         </svg>
       </motion.div>
 
@@ -71,7 +75,7 @@ export function GridBackground() {
           x2="100%"
           y2="100%"
           stroke="var(--pink)"
-          strokeWidth="1.5"
+          strokeWidth="2.5"
         />
         <line
           x1="100%"
@@ -79,7 +83,7 @@ export function GridBackground() {
           x2="0"
           y2="100%"
           stroke="var(--pink)"
-          strokeWidth="1.5"
+          strokeWidth="2.5"
         />
         <line
           x1="50%"
@@ -87,7 +91,7 @@ export function GridBackground() {
           x2="100%"
           y2="50%"
           stroke="var(--pink)"
-          strokeWidth="1.5"
+          strokeWidth="2.5"
         />
         <line
           x1="0"
@@ -95,7 +99,7 @@ export function GridBackground() {
           x2="50%"
           y2="100%"
           stroke="var(--pink)"
-          strokeWidth="1.5"
+          strokeWidth="2.5"
         />
       </svg>
 
