@@ -151,7 +151,7 @@ export function ProjectsSection() {
       {/* Section labels */}
       <div className="absolute top-6 left-6 font-mono text-xs text-pink">ML</div>
       <div className="absolute top-6 right-6 font-mono text-xs text-muted-foreground">
-        SECTION_02
+        SECTION_03
       </div>
 
       <div className="mx-auto max-w-7xl px-6">

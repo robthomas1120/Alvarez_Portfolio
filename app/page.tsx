@@ -17,8 +17,8 @@ export default function Home() {
       <div className="relative z-10">
         <HeroSection />
         <AboutSection />
-        <ProjectsSection />
         <DataVizProjectsSection />
+        <ProjectsSection />
         <FooterSection />
       </div>
     </main>
