@@ -25,10 +25,15 @@ interface ProjectData {
   name: string;
   code: string;
   dataset: string;
+  datasetDescription?: string;
   model: string;
+  modelLabel?: string;
   description: string;
   longDescription: string;
+  subtitle?: string;
+  dateTag?: string;
   metrics: ProjectMetric[];
+  metricsLabel?: string;
   technologies: string[];
   features: string[];
 }
@@ -59,8 +64,15 @@ export function ProjectPanel({ project, index }: ProjectPanelProps) {
           <div className="absolute -bottom-px -left-px h-4 w-4 border-b-2 border-l-2 border-pink opacity-0 transition-opacity group-hover:opacity-100" />
           <div className="absolute -bottom-px -right-px h-4 w-4 border-b-2 border-r-2 border-pink opacity-0 transition-opacity group-hover:opacity-100" />
 
+          {/* Date tag (top-left) */}
+          {project.dateTag && (
+            <div className="absolute top-3 left-6 font-mono text-xs text-muted-foreground">
+              {project.dateTag}
+            </div>
+          )}
+
           {/* Code label */}
-          <div className="absolute top-3 right-3 font-mono text-xs text-pink">
+          <div className={`absolute top-3 right-3 font-mono text-xs text-pink ${project.dateTag ? '' : ''}`}>
             {project.code}
           </div>
 
@@ -81,18 +93,19 @@ export function ProjectPanel({ project, index }: ProjectPanelProps) {
                 <p className="text-foreground">{project.dataset}</p>
               </div>
               <div>
-                <span className="text-muted-foreground">MODEL:</span>
+                <span className="text-muted-foreground">{project.modelLabel || 'MODEL'}:</span>
                 <p className="text-foreground">{project.model}</p>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {project.metrics.slice(0, 3).map((metric) => (
                 <MetricBadge
                   key={metric.label}
                   label={metric.label}
                   value={metric.value}
                   variant="highlight"
+                  compact
                 />
               ))}
             </div>
@@ -116,6 +129,12 @@ export function ProjectPanel({ project, index }: ProjectPanelProps) {
             </span>
             <DialogTitle className="text-xl font-bold">{project.name}</DialogTitle>
           </div>
+          {project.subtitle && (
+            <p className="text-sm text-pink/80 italic">{project.subtitle}</p>
+          )}
+          {project.dateTag && (
+            <p className="text-xs font-mono text-muted-foreground">{project.dateTag}</p>
+          )}
           <DialogDescription className="text-muted-foreground">
             {project.longDescription}
           </DialogDescription>
@@ -131,10 +150,13 @@ export function ProjectPanel({ project, index }: ProjectPanelProps) {
                 Dataset
               </h4>
               <p className="text-foreground">{project.dataset}</p>
+              {project.datasetDescription && (
+                <p className="mt-1 text-xs text-muted-foreground">{project.datasetDescription}</p>
+              )}
             </div>
             <div className="border border-border p-4">
               <h4 className="mb-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                Model
+                {project.modelLabel || 'Model'}
               </h4>
               <p className="text-foreground">{project.model}</p>
             </div>
@@ -143,7 +165,7 @@ export function ProjectPanel({ project, index }: ProjectPanelProps) {
           {/* Metrics */}
           <div>
             <h4 className="mb-3 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-              Performance Metrics
+              {project.metricsLabel || 'Performance Metrics'}
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.metrics.map((metric) => (
