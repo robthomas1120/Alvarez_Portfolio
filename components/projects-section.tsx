@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 
 export function ProjectsSection() {
   return (
-    <section className="relative border-b border-border py-24">
+    <section id="ml" className="relative border-b border-border py-24">
       {/* Section labels */}
       <div className="absolute top-6 left-6 font-mono text-xs text-pink">ML</div>
       <div className="absolute top-6 right-6 font-mono text-xs text-muted-foreground">

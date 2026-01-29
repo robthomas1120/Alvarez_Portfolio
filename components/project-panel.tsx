@@ -121,7 +121,7 @@ export function ProjectPanel({ project, index }: ProjectPanelProps) {
         </motion.div>
       </DialogTrigger>
 
-      <DialogContent className="max-w-2xl border-pink bg-navy-dark text-foreground">
+      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto scrollbar-hidden border-pink bg-navy-dark text-foreground">
         <DialogHeader>
           <div className="flex items-center gap-3">
             <span className="border border-pink bg-pink/10 px-2 py-1 font-mono text-xs text-pink">

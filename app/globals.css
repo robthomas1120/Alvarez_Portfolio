@@ -37,7 +37,7 @@
   --sidebar-accent-foreground: #f0b5d4;
   --sidebar-border: #3a3a6a;
   --sidebar-ring: #f0b5d4;
-  
+
   --navy-dark: #0a0a2e;
   --navy-mid: #0d0d3a;
   --navy-light: #1a1a4a;
@@ -85,7 +85,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  
+
   --color-navy-dark: var(--navy-dark);
   --color-navy-mid: var(--navy-mid);
   --color-navy-light: var(--navy-light);
@@ -98,7 +98,34 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
+
+  body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+  }
+}
+
+/* Hidden scrollbar utility - scrollable but invisible scrollbar */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
 }

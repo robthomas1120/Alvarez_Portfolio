@@ -71,22 +71,31 @@ export function HeroSection() {
             and advanced data analytics with production-ready implementations.
           </motion.p>
 
-          {/* Labels */}
+          {/* Navigation buttons */}
           <motion.div
             className="mt-8 flex flex-wrap items-center justify-center gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <span className="border border-pink bg-pink px-4 py-2 font-mono text-xl font-bold text-navy-dark">
-              A8
-            </span>
-            <span className="border border-border px-4 py-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-              Bold Grid
-            </span>
-            <span className="border border-border px-4 py-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-              Clean Geometry
-            </span>
+            <a
+              href="#dataviz"
+              className="group flex cursor-pointer items-center gap-2 border border-pink bg-pink px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider text-navy-dark shadow-lg shadow-pink/20 transition-all hover:scale-105 hover:bg-pink/90 hover:shadow-xl hover:shadow-pink/30"
+            >
+              Data Viz
+              <svg className="h-4 w-4 transition-transform group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </a>
+            <a
+              href="#ml"
+              className="group flex cursor-pointer items-center gap-2 border border-border bg-navy-light/50 px-6 py-3 font-mono text-sm uppercase tracking-wider text-muted-foreground shadow-lg transition-all hover:scale-105 hover:border-pink hover:text-pink hover:shadow-xl"
+            >
+              ML
+              <svg className="h-4 w-4 transition-transform group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </a>
           </motion.div>
         </div>
 
