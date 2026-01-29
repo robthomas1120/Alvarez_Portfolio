@@ -36,6 +36,8 @@ interface ProjectData {
   metricsLabel?: string;
   technologies: string[];
   features: string[];
+  analysisUrl?: string;
+  dashboardUrl?: string;
 }
 
 interface ProjectPanelProps {
@@ -222,11 +224,16 @@ export function ProjectPanel({ project, index }: ProjectPanelProps) {
           <Button
             variant="outline"
             className="border-border text-foreground hover:border-pink hover:bg-pink/10 bg-transparent"
+            asChild
           >
-            View Code
+            <a href={project.analysisUrl || "#"} target="_blank" rel="noopener noreferrer">
+              View Notebook
+            </a>
           </Button>
-          <Button className="bg-pink text-navy-dark hover:bg-pink-dark">
-            Live Demo
+          <Button className="bg-pink text-navy-dark hover:bg-pink-dark" asChild>
+            <a href={project.dashboardUrl || "#"} target="_blank" rel="noopener noreferrer">
+              View Dashboard
+            </a>
           </Button>
         </div>
       </DialogContent>

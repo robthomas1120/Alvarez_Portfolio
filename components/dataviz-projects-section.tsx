@@ -34,6 +34,8 @@ const projects = [
       "Cleaned and standardized datasets using Tableau Prep",
       "Actionable insights provided to faculty",
     ],
+    analysisUrl: "#",
+    dashboardUrl: "#",
   },
   {
     id: "dv2",
@@ -66,6 +68,8 @@ const projects = [
       "Data-driven insights communicated through executive-ready Power BI dashboards",
       "Analytics supporting operational and policy decision-making for MMDA",
     ],
+    analysisUrl: "#",
+    dashboardUrl: "#",
   },
   {
     id: "dv3",
@@ -94,6 +98,8 @@ const projects = [
       "Relational Data Modeling: Converting flat CSV files into optimized SQL tables for efficient querying",
       "Anomaly Detection: Identifying and flagging outlier transactions and 'UNKNOWN' data points for manual review",
     ],
+    analysisUrl: "#",
+    dashboardUrl: "#",
   },
 ];
 
