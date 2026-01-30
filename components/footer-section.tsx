@@ -24,13 +24,13 @@ export function FooterSection() {
   return (
     <footer className="relative border-t border-border bg-navy-mid">
       {/* Section label */}
-      <div className="absolute top-6 left-6 font-mono text-xs text-pink">SYSTEM_INFO</div>
-      <div className="absolute top-6 right-6 font-mono text-xs text-muted-foreground">
+      <div className="absolute top-4 left-4 font-mono text-xs text-pink sm:left-6 sm:top-6">SYSTEM_INFO</div>
+      <div className="absolute top-4 right-4 hidden font-mono text-xs text-muted-foreground sm:right-6 sm:top-6 sm:block">
         FOOTER_V1.0
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 lg:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-4 py-12 pt-10 sm:px-6 sm:py-16 sm:pt-16">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-3">
           {/* Brand section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export function FooterSection() {
               Production-ready machine learning solutions with clean, geometric design
               principles. Built for scalability and performance.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-4">
               {links.map((link) => (
                 <motion.a
                   key={link.label}
@@ -125,7 +125,7 @@ export function FooterSection() {
 
         {/* Bottom bar */}
         <motion.div
-          className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row"
+          className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:mt-12 sm:pt-8 md:flex-row"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -134,7 +134,7 @@ export function FooterSection() {
           <p className="font-mono text-xs text-muted-foreground">
             © 2026 ML Portfolio. Designed with geometric precision.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
             <AnimatedShape type="star" size={12} delay={0.5} />
             <span className="font-mono text-xs text-pink">CLEAN_GEOMETRY</span>
             <AnimatedShape type="star" size={12} delay={0.7} />

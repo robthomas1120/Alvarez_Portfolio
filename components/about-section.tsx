@@ -33,14 +33,14 @@ const focusAreas = [
 
 export function AboutSection() {
   return (
-    <section className="relative border-b border-border py-24">
+    <section className="relative border-b border-border py-16 pt-12 sm:py-24 sm:pt-24">
       {/* Section labels */}
-      <div className="absolute top-6 left-6 font-mono text-xs text-pink">ABOUT</div>
-      <div className="absolute top-6 right-6 font-mono text-xs text-muted-foreground">
+      <div className="absolute top-4 left-4 font-mono text-xs text-pink sm:left-6 sm:top-6">ABOUT</div>
+      <div className="absolute top-4 right-4 hidden font-mono text-xs text-muted-foreground sm:right-6 sm:top-6 sm:block">
         SECTION_01
       </div>
 
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <motion.div
           className="mb-16 grid gap-8 lg:grid-cols-2"
@@ -54,7 +54,7 @@ export function AboutSection() {
               <span className="bg-pink px-3 py-1 font-mono text-sm text-navy-dark">A20</span>
               <Separator className="flex-1 bg-border" />
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
               Focus Areas & Expertise
             </h2>
           </div>
@@ -67,7 +67,7 @@ export function AboutSection() {
         </motion.div>
 
         {/* Focus areas grid */}
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
           {focusAreas.map((area, index) => (
             <motion.div
               key={area.code}
@@ -122,7 +122,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="flex flex-col items-center justify-between gap-6 p-8 md:flex-row">
+          <div className="flex flex-col items-center justify-between gap-4 p-4 sm:gap-6 sm:p-8 md:flex-row">
             <div className="flex items-center gap-6">
               <div className="hidden md:block">
                 <AnimatedShape type="saturn" size={100} delay={0.5} />
@@ -136,10 +136,10 @@ export function AboutSection() {
                 </h3>
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <span className="font-serif text-4xl text-pink">Machine Learning</span>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
+              <span className="text-center font-serif text-2xl text-pink sm:text-4xl">Machine Learning</span>
               <div className="hidden h-20 w-px bg-border md:block" />
-              <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground [writing-mode:vertical-lr]">
+              <span className="hidden font-mono text-xs uppercase tracking-wider text-muted-foreground sm:block [writing-mode:vertical-lr]">
                 Next Grid
               </span>
             </div>

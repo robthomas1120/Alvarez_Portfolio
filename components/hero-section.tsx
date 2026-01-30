@@ -10,16 +10,17 @@ export function HeroSection() {
 
       {/* Decorative labels */}
       <motion.div
-        className="absolute top-6 left-6 font-mono text-xs tracking-wider text-pink/70"
+        className="absolute top-4 left-4 font-mono text-[10px] tracking-wider text-pink/70 sm:left-6 sm:top-6 sm:text-xs"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        Machine Learning and Data Visualization
+        <span className="hidden sm:inline">Machine Learning and Data Visualization</span>
+        <span className="sm:hidden">ML & Data Viz</span>
       </motion.div>
 
       <motion.div
-        className="absolute top-6 right-6 font-mono text-2xl font-bold text-pink"
+        className="absolute top-4 right-4 font-mono text-xl font-bold text-pink sm:right-6 sm:top-6 sm:text-2xl"
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -28,32 +29,32 @@ export function HeroSection() {
       </motion.div>
 
       {/* Main content */}
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 py-24">
-        {/* Top decorative panel */}
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 py-20 sm:px-6 sm:py-24">
+        {/* Top decorative panel - Rob Alvarez name */}
         <motion.div
-          className="absolute top-20 left-6 hidden bg-pink px-6 py-4 md:block"
+          className="absolute left-4 top-14 bg-pink px-4 py-2 sm:left-6 sm:top-20 sm:px-6 sm:py-4"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <span className="font-serif text-3xl text-navy-dark">Rob Alvarez</span>
+          <span className="font-serif text-xl text-navy-dark sm:text-3xl">Rob Alvarez</span>
         </motion.div>
 
         {/* Main headline */}
         <div className="relative z-10 text-center">
           <motion.div
-            className="mb-4 inline-block border border-pink bg-pink px-8 py-6"
+            className="mb-4 inline-block border border-pink bg-pink px-4 py-4 sm:px-8 sm:py-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h1 className="text-3xl font-black uppercase tracking-tighter text-navy-dark md:text-5xl lg:text-6xl">
+            <h1 className="text-2xl font-black uppercase tracking-tighter text-navy-dark sm:text-3xl md:text-5xl lg:text-6xl">
               Machine Learning
             </h1>
           </motion.div>
 
           <motion.h2
-            className="mb-6 text-3xl font-black uppercase tracking-tighter text-foreground md:text-5xl lg:text-6xl"
+            className="mb-4 text-2xl font-black uppercase tracking-tighter text-foreground sm:mb-6 sm:text-3xl md:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -62,7 +63,7 @@ export function HeroSection() {
           </motion.h2>
 
           <motion.p
-            className="mx-auto max-w-2xl text-lg text-muted-foreground"
+            className="mx-auto max-w-2xl px-2 text-base text-muted-foreground sm:px-0 sm:text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -141,19 +142,19 @@ export function HeroSection() {
 
         {/* Bottom grid section indicator */}
         <motion.div
-          className="absolute bottom-6 right-6 flex items-center gap-4"
+          className="absolute bottom-4 right-4 hidden items-center gap-4 sm:bottom-6 sm:right-6 sm:flex"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          <div className="h-16 w-16 border border-pink/30">
+          <div className="h-12 w-12 border border-pink/30 sm:h-16 sm:w-16">
             <div className="grid h-full w-full grid-cols-4 grid-rows-4">
               {[...Array(16)].map((_, i) => (
                 <div key={i} className="border border-pink/20" />
               ))}
             </div>
           </div>
-          <span className="font-serif text-2xl text-pink/70">Data Science</span>
+          <span className="font-serif text-xl text-pink/70 sm:text-2xl">Data Science</span>
         </motion.div>
 
         {/* Diagonal line decoration */}

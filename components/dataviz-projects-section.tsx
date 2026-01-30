@@ -105,14 +105,14 @@ const projects = [
 
 export function DataVizProjectsSection() {
   return (
-    <section id="dataviz" className="relative border-b border-border py-24">
+    <section id="dataviz" className="relative border-b border-border py-16 pt-12 sm:py-24 sm:pt-24">
       {/* Section labels */}
-      <div className="absolute top-6 left-6 font-mono text-xs text-pink">DATA VISUALIZATIONS</div>
-      <div className="absolute top-6 right-6 font-mono text-xs text-muted-foreground">
+      <div className="absolute top-4 left-4 font-mono text-xs text-pink sm:left-6 sm:top-6">DATA VIZ</div>
+      <div className="absolute top-4 right-4 hidden font-mono text-xs text-muted-foreground sm:right-6 sm:top-6 sm:block">
         SECTION_02
       </div>
 
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <motion.div
           className="mb-12"
@@ -128,7 +128,7 @@ export function DataVizProjectsSection() {
               Data Visualization Projects
             </span>
           </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="mb-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
             Data Visualization
           </h2>
           <p className="max-w-2xl text-muted-foreground">
@@ -138,7 +138,7 @@ export function DataVizProjectsSection() {
         </motion.div>
 
         {/* Projects grid */}
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <ProjectPanel key={project.id} project={project} index={index} />
           ))}
