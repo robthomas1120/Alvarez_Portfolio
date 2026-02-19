@@ -1,7 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ProjectPanel } from "@/components/project-panel";
 import { Separator } from "@/components/ui/separator";
+
+const projects = [
+  {
+    id: "ml1",
+    name: "PetVision: Real-Time Species Classifier",
+    code: "ML_01",
+    dateTag: "Jan 2026 – Feb 2026",
+    subtitle: "A deep learning-based computer vision application that identifies cats and dogs in real-time via webcam using transfer learning.",
+    dataset: "Cats vs. Dogs (Keras Directory)",
+    datasetDescription: "A curated collection of animal imagery partitioned into 275 training images and 70 validation images across two distinct classes.",
+    model: "MobileNetV2",
+    modelLabel: "MODEL ARCHITECTURE",
+    description: "Deep learning computer vision application identifying cats and dogs in real-time.",
+    longDescription:
+      "This project demonstrates an end-to-end machine learning pipeline, from training a deep neural network in a cloud environment (Google Colab) to deploying the model locally for real-time inference. By leveraging transfer learning, the model achieves high accuracy even with a specialized dataset.",
+    metrics: [
+      { label: "Validation Accuracy", value: "100%", tooltip: "Model accuracy on validation set" },
+      { label: "Training Epochs", value: "10", tooltip: "Number of training cycles" },
+      { label: "Latency", value: "< 100ms", tooltip: "Inference speed on consumer hardware" },
+    ],
+    metricsLabel: "Performance Metrics",
+    technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Google Colab"],
+    features: [
+      "Transfer Learning Implementation: Utilized the MobileNetV2 architecture (pre-trained on ImageNet) with frozen base layers to maximize feature extraction efficiency on a small dataset.",
+      "Real-Time Computer Vision: Integrated OpenCV to capture live video feeds, perform frame-by-frame preprocessing, and overlay prediction labels dynamically.",
+      "Data Augmentation Pipeline: Implemented ImageDataGenerator with random rotations and horizontal flips to improve model generalization and prevent overfitting.",
+      "Binary Classification Optimization: Employed a Sigmoid activation function and Binary Crossentropy loss to achieve a definitive probability split between classes.",
+      "Cross-Platform Deployment: Developed a portable inference script that reconstructs the model architecture locally to ensure compatibility across different Keras environments.",
+    ],
+    analysisUrl: "#",
+    dashboardUrl: "#",
+  },
+];
 
 export function ProjectsSection() {
   return (
@@ -37,22 +71,12 @@ export function ProjectsSection() {
           </p>
         </motion.div>
 
-        {/* Coming Soon placeholder */}
-        <motion.div
-          className="flex flex-col items-center justify-center border border-dashed border-border py-24"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="mb-4 border border-pink bg-pink/10 px-4 py-2">
-            <span className="font-mono text-sm text-pink">COMING SOON</span>
-          </div>
-          <h3 className="mb-2 text-xl font-bold text-foreground">Projects in Development</h3>
-          <p className="max-w-md text-center text-sm text-muted-foreground">
-            Machine learning projects are currently being developed. Check back soon for updates on computer vision, NLP, and predictive modeling work.
-          </p>
-        </motion.div>
+        {/* Projects grid */}
+        <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectPanel key={project.id} project={project} index={index} />
+          ))}
+        </div>
       </div>
     </section>
   );
