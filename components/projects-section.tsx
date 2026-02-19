@@ -35,6 +35,36 @@ const projects = [
     analysisUrl: "#",
     dashboardUrl: "#",
   },
+  {
+    id: "ml2",
+    name: "NeuroDigit: Interactive Handwriting Recognition",
+    code: "ML_02",
+    dateTag: "Jan 2026 – Feb 2026",
+    subtitle: "An end-to-end computer vision project featuring a custom-trained CNN and a Tkinter-based GUI for real-time digit classification.",
+    dataset: "MNIST Handwritten Digits (Raw Binary)",
+    datasetDescription: "Consists of 60,000 training and 10,000 test images of digits 0–9. Manually parsed .idx3-ubyte files using Python's struct module.",
+    model: "Custom CNN (Conv2D + MaxPooling2D)",
+    modelLabel: "MODEL ARCHITECTURE",
+    description: "Real-time digit classification using a custom CNN and interactive GUI.",
+    longDescription:
+      "This project showcases the full machine learning lifecycle: manual parsing of binary datasets, architectural design of a CNN, rigorous evaluation via confusion matrices, and the development of a 'Human-in-the-Loop' desktop application.",
+    metrics: [
+      { label: "Accuracy", value: "99.5%", tooltip: "Model accuracy on test set" },
+      { label: "Training Loss", value: "0.014", tooltip: "Final loss after training" },
+      { label: "Output Classes", value: "10", tooltip: "Digits 0-9" },
+    ],
+    metricsLabel: "Performance Metrics",
+    technologies: ["Python", "TensorFlow/Keras", "Tkinter", "NumPy", "Matplotlib", "OpenCV", "Pillow"],
+    features: [
+      "Manual Byte-Stream Parsing: Developed custom functions using the struct library to unpack high-endian binary data from raw MNIST source files.",
+      "CNN Engineering: Engineered a sequential model featuring Conv2D and MaxPooling2D layers to achieve high-precision accuracy of over 99%.",
+      "Interactive Desktop Interface: Built a Tkinter GUI that allows users to draw digits on a digital canvas for live inference.",
+      "Advanced Evaluation: Implemented a Confusion Matrix visualization to identify specific digit-to-digit misclassifications.",
+      "Data Preprocessing Pipeline: Integrated real-time image resizing (280px to 28px) and normalization to match the training distribution.",
+    ],
+    analysisUrl: "#",
+    dashboardUrl: "#",
+  },
 ];
 
 export function ProjectsSection() {
