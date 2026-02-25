@@ -65,6 +65,36 @@ const projects = [
     analysisUrl: "#",
     dashboardUrl: "#",
   },
+  {
+    id: "ml3",
+    name: "SentinelSMS - \"Ham or Spam\" Classifier",
+    code: "ML_03",
+    dateTag: "Feb 2026",
+    subtitle: "An end-to-end NLP application featuring a custom-trained Multinomial Naive Bayes model and a Streamlit-based web interface for real-time message classification.",
+    dataset: "SMS Spam Collection (CSV)",
+    datasetDescription: "Contains 5,574 messages tagged as Ham (0) or Spam (1).",
+    model: "Multinomial Naive Bayes (MNB)",
+    modelLabel: "MODEL ARCHITECTURE",
+    description: "End-to-end NLP application for real-time SMS classification.",
+    longDescription:
+      "This project showcases a complete Natural Language Processing (NLP) pipeline designed to identify fraudulent text messages. By implementing TF-IDF Vectorization and a Multinomial Naive Bayes classifier, the system distinguishes between legitimate communications (\"Ham\") and malicious/marketing content (\"Spam\") with high precision.",
+    metrics: [
+      { label: "Overall Accuracy", value: "97%", tooltip: "Model accuracy on test set" },
+      { label: "Spam Precision", value: "100%", tooltip: "Zero false positives in testing" },
+      { label: "Ham F1-Score", value: "0.98", tooltip: "Balance between precision and recall for Ham" },
+    ],
+    metricsLabel: "Performance Metrics",
+    technologies: ["Python", "Scikit-Learn", "Streamlit", "Pandas", "Joblib", "Google Colab"],
+    features: [
+      "Custom Scikit-Learn Pipeline: Engineered a streamlined Pipeline that bundles the TfidfVectorizer and MultinomialNB into a single serializable object, ensuring zero data leakage.",
+      "Intelligent Text Vectorization: Implemented TF-IDF to mathematically weight terms, effectively filtering out common English stop-words to focus on scam-specific patterns.",
+      "Robust Data Preprocessing: Managed raw dataset challenges by implementing latin-1 encoding and custom mapping to transform categorical labels into binary integers.",
+      "Deterministic Training: Utilized a random_state of 42 for a 20% test-split, ensuring that the model's high performance is reproducible and verifiable.",
+      "Probabilistic Inference UI: Developed a real-time web interface where users can receive instant 'Confidence Scores', showing the mathematical probability behind every classification.",
+    ],
+    analysisUrl: "#",
+    dashboardUrl: "#",
+  },
 ];
 
 export function ProjectsSection() {
