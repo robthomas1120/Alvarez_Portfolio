@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
 
 interface MetricBadgeProps {
@@ -18,6 +19,8 @@ export function MetricBadge({
   variant = "default",
   compact = false,
 }: MetricBadgeProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   const badge = (
     <motion.div
       className={`inline-flex items-center gap-1.5 border font-mono text-xs transition-all hover:bg-pink/10 ${compact ? "px-2 py-1" : "px-3 py-1.5"
@@ -27,6 +30,8 @@ export function MetricBadge({
         }`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
     >
       {!compact && <span className="uppercase tracking-wider opacity-70">{label}</span>}
       {compact && <span className="uppercase tracking-wider opacity-70 text-[10px]">{label}</span>}
@@ -37,7 +42,7 @@ export function MetricBadge({
   if (tooltip) {
     return (
       <TooltipProvider>
-        <Tooltip>
+        <Tooltip open={isOpen}>
           <TooltipTrigger asChild>{badge}</TooltipTrigger>
           <TooltipContent className="border-pink bg-navy-mid text-pink">
             {tooltip}

@@ -10,15 +10,15 @@ const projects = [
     name: "Student Performance Analytics Dashboard",
     code: "VIZ_01",
     dateTag: "Jan 2025 – Apr 2025",
-    subtitle: "Academic performance insights from a Data Analyst internship at UST",
+    subtitle: "Academic performance analytics built during a Data Analyst internship at UST.",
     dataset: "Student Academic Performance Data",
-    datasetDescription: "Multi-semester student grades across colleges, courses, subjects, and students",
+    datasetDescription: "Multi-semester grades across colleges, courses, and students.",
     model: "Trend, Gap & Drill-down Analysis",
     modelLabel: "INSIGHT ENGINE",
     description:
       "Interactive dashboards for analyzing student performance across colleges, courses, and individual students with drill-down capabilities.",
     longDescription:
-      "A comprehensive student performance analytics platform developed during a Data Analyst internship at UST. Features interactive dashboards built with Looker Studio for exploring academic data across multiple granularity levels—from college-wide trends down to individual student performance. Includes trend analysis, gap identification, and at-risk student identification using cleaned and standardized datasets.",
+      "Built during a UST internship, this Looker Studio platform visualizes academic data from college-wide trends down to individual students, with trend analysis, gap identification, and at-risk flagging.",
     metrics: [
       { label: "Students analyzed", value: "30K+", tooltip: "Total students in dataset" },
       { label: "Subjects tracked", value: "100+", tooltip: "Academic subjects covered" },
@@ -28,11 +28,10 @@ const projects = [
     metricsLabel: "Performance Metrics",
     technologies: ["Excel", "Tableau Prep", "Looker Studio"],
     features: [
-      "Interactive dashboards across colleges, courses, and individual students",
-      "Drill-down analysis (college → course → student)",
-      "Trend, gap, and at-risk student identification",
-      "Cleaned and standardized datasets using Tableau Prep",
-      "Actionable insights provided to faculty",
+      "Drill-down dashboards from college → course → student level",
+      "Trend and gap analysis with at-risk student flagging",
+      "Data cleaned and standardized via Tableau Prep",
+      "Insights delivered directly to faculty",
     ],
     analysisUrl: "#",
     dashboardUrl: "#",
@@ -42,15 +41,15 @@ const projects = [
     name: "Metro Manila Traffic Analytics Dashboard",
     code: "VIZ_02",
     dateTag: "Sep 2025 – Present",
-    subtitle: "Data-driven traffic monitoring and violation analysis platform for MMDA, integrating camera analytics, system performance evaluation, and decision-ready dashboards.",
+    subtitle: "Traffic monitoring and violation analytics platform for MMDA with executive-ready Power BI dashboards.",
     dataset: "Metro Manila Traffic Camera Analytics",
-    datasetDescription: "Large-scale traffic camera data covering vehicle detection, plate recognition, and traffic violations across Metro Manila.",
+    datasetDescription: "Traffic camera data covering plate recognition, vehicle detection, and violations across Metro Manila.",
     model: "Trend, Gap & Drill-down Analysis",
     modelLabel: "INSIGHT ENGINE",
     description:
       "Performance dashboards for traffic cameras across Metro Manila with drill-down analysis by location, time, and violation type.",
     longDescription:
-      "A comprehensive traffic analytics platform developed for MMDA, featuring performance dashboards that monitor traffic cameras across Metro Manila. Includes accuracy monitoring for plate recognition and violation detection, identification of system gaps and false positives, and executive-ready Power BI dashboards supporting operational and policy decision-making.",
+      "Built for MMDA, this Power BI platform monitors traffic cameras across Metro Manila — tracking plate recognition accuracy, violation validity, system gaps, and false positives to support operational and policy decisions.",
     metrics: [
       { label: "Plate Recognition", value: "97%", tooltip: "Plate recognition accuracy" },
       { label: "Violation Validity", value: "90%", tooltip: "Violation validity rate" },
@@ -61,12 +60,10 @@ const projects = [
     metricsLabel: "Performance Metrics",
     technologies: ["Python", "SQL", "Power BI"],
     features: [
-      "Performance dashboards for traffic cameras across Metro Manila",
-      "Drill-down analysis by location, time, and violation type",
+      "Drill-down dashboards by location, time, and violation type",
       "Accuracy monitoring for plate recognition and violation detection",
-      "Identification of system gaps, false positives, and improvement areas",
-      "Data-driven insights communicated through executive-ready Power BI dashboards",
-      "Analytics supporting operational and policy decision-making for MMDA",
+      "Flags system gaps, false positives, and improvement areas",
+      "Executive-ready Power BI reports for MMDA decision-making",
     ],
     analysisUrl: "#",
     dashboardUrl: "#",
@@ -76,15 +73,15 @@ const projects = [
     name: "AromaData: Urban Cafe Analytics",
     code: "VIZ_03",
     dateTag: "Jan 2026 – Jan 2026",
-    subtitle: "An end-to-end data engineering and visualization pipeline that transforms fragmented, 'dirty' retail logs into high-fidelity business intelligence dashboards.",
+    subtitle: "ELT pipeline turning messy retail logs into clean, interactive Looker Studio BI dashboards.",
     dataset: "Transactional Retail Logs (Kaggle)",
-    datasetDescription: "Raw retail transaction data requiring extensive cleaning and normalization.",
+    datasetDescription: "Raw retail transaction data requiring cleaning and normalization.",
     model: "ELT Pipeline & Normalization",
     modelLabel: "PROCESS",
     description:
       "Data engineering pipeline transforming dirty retail data into actionable business intelligence dashboards.",
     longDescription:
-      "A comprehensive data engineering and visualization project that demonstrates the full data lifecycle—from ingesting messy, fragmented retail logs to delivering polished, interactive business intelligence dashboards. Features automated schema validation, relational data modeling, and advanced drill-down analytics in Looker Studio.",
+      "Full data lifecycle project — ingests messy retail logs, applies automated schema validation and relational modeling, and delivers interactive Looker Studio BI dashboards with drill-down analytics.",
     metrics: [
       { label: "Data Quality", value: "99.8%", tooltip: "Post-cleaning data accuracy" },
       { label: "Records", value: "12K+", tooltip: "Processed transaction records" },
@@ -93,10 +90,10 @@ const projects = [
     metricsLabel: "Performance Metrics",
     technologies: ["Python", "SQL", "Looker Studio", "Pandas", "Data Cleaning"],
     features: [
-      "Automated Schema Validation: Programmatic handling of null values, date inconsistencies, and currency formatting errors",
-      "Advanced Drill-Down Analytics: Interactive Looker Studio dashboards allowing for deep-dives into regional and product-level performance",
-      "Relational Data Modeling: Converting flat CSV files into optimized SQL tables for efficient querying",
-      "Anomaly Detection: Identifying and flagging outlier transactions and 'UNKNOWN' data points for manual review",
+      "Schema Validation: Automated handling of nulls, date inconsistencies, and currency errors",
+      "Drill-Down Analytics: Looker Studio dashboards for regional and product-level deep-dives",
+      "Relational Modeling: Flat CSVs converted into optimized SQL tables",
+      "Anomaly Detection: Flags outlier transactions and 'UNKNOWN' data points for review",
     ],
     analysisUrl: "#",
     dashboardUrl: "#",
@@ -129,11 +126,10 @@ export function DataVizProjectsSection() {
             </span>
           </div>
           <h2 className="mb-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-            Data Visualization
+            Data Visualization Projects
           </h2>
           <p className="max-w-2xl text-muted-foreground">
-            Interactive visualization tools and dashboards for exploring complex datasets,
-            from real-time analytics to immersive 3D experiences.
+            Interactive dashboards and analytics tools for exploring complex real-world datasets.
           </p>
         </motion.div>
 

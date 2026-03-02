@@ -10,14 +10,14 @@ const projects = [
     name: "PetVision: Real-Time Species Classifier",
     code: "ML_01",
     dateTag: "Jan 2026 – Feb 2026",
-    subtitle: "A deep learning-based computer vision application that identifies cats and dogs in real-time via webcam using transfer learning.",
+    subtitle: "Real-time cat vs. dog classifier built with transfer learning and live webcam inference.",
     dataset: "Cats vs. Dogs (Keras Directory)",
-    datasetDescription: "A curated collection of animal imagery partitioned into 275 training images and 70 validation images across two distinct classes.",
+    datasetDescription: "275 training / 70 validation images across two classes.",
     model: "MobileNetV2",
     modelLabel: "MODEL ARCHITECTURE",
     description: "Deep learning computer vision application identifying cats and dogs in real-time.",
     longDescription:
-      "This project demonstrates an end-to-end machine learning pipeline, from training a deep neural network in a cloud environment (Google Colab) to deploying the model locally for real-time inference. By leveraging transfer learning, the model achieves high accuracy even with a specialized dataset.",
+      "End-to-end ML pipeline: trained on Google Colab using MobileNetV2 transfer learning, then deployed locally for real-time webcam inference.",
     metrics: [
       { label: "Validation Accuracy", value: "100%", tooltip: "Model accuracy on validation set" },
       { label: "Training Epochs", value: "10", tooltip: "Number of training cycles" },
@@ -26,11 +26,11 @@ const projects = [
     metricsLabel: "Performance Metrics",
     technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Google Colab"],
     features: [
-      "Transfer Learning Implementation: Utilized the MobileNetV2 architecture (pre-trained on ImageNet) with frozen base layers to maximize feature extraction efficiency on a small dataset.",
-      "Real-Time Computer Vision: Integrated OpenCV to capture live video feeds, perform frame-by-frame preprocessing, and overlay prediction labels dynamically.",
-      "Data Augmentation Pipeline: Implemented ImageDataGenerator with random rotations and horizontal flips to improve model generalization and prevent overfitting.",
-      "Binary Classification Optimization: Employed a Sigmoid activation function and Binary Crossentropy loss to achieve a definitive probability split between classes.",
-      "Cross-Platform Deployment: Developed a portable inference script that reconstructs the model architecture locally to ensure compatibility across different Keras environments.",
+      "Transfer Learning via MobileNetV2 (ImageNet weights)",
+      "Real-time webcam inference with OpenCV",
+      "Data augmentation to reduce overfitting",
+      "Binary classification with Sigmoid + Binary Crossentropy",
+      "Portable local deployment script",
     ],
     analysisUrl: "#",
     dashboardUrl: "#",
@@ -40,14 +40,14 @@ const projects = [
     name: "NeuroDigit: Interactive Handwriting Recognition",
     code: "ML_02",
     dateTag: "Jan 2026 – Feb 2026",
-    subtitle: "An end-to-end computer vision project featuring a custom-trained CNN and a Tkinter-based GUI for real-time digit classification.",
+    subtitle: "Custom CNN trained on raw MNIST binary files with a Tkinter GUI for real-time digit recognition.",
     dataset: "MNIST Handwritten Digits (Raw Binary)",
-    datasetDescription: "Consists of 60,000 training and 10,000 test images of digits 0–9. Manually parsed .idx3-ubyte files using Python's struct module.",
+    datasetDescription: "60,000 training / 10,000 test images of digits 0–9, parsed manually from .idx3-ubyte files.",
     model: "Custom CNN (Conv2D + MaxPooling2D)",
     modelLabel: "MODEL ARCHITECTURE",
     description: "Real-time digit classification using a custom CNN and interactive GUI.",
     longDescription:
-      "This project showcases the full machine learning lifecycle: manual parsing of binary datasets, architectural design of a CNN, rigorous evaluation via confusion matrices, and the development of a 'Human-in-the-Loop' desktop application.",
+      "Covers the full ML lifecycle: binary dataset parsing, CNN design, confusion matrix evaluation, and a Human-in-the-Loop desktop interface.",
     metrics: [
       { label: "Accuracy", value: "99.5%", tooltip: "Model accuracy on test set" },
       { label: "Training Loss", value: "0.014", tooltip: "Final loss after training" },
@@ -56,11 +56,11 @@ const projects = [
     metricsLabel: "Performance Metrics",
     technologies: ["Python", "TensorFlow/Keras", "Tkinter", "NumPy", "Matplotlib", "OpenCV", "Pillow"],
     features: [
-      "Manual Byte-Stream Parsing: Developed custom functions using the struct library to unpack high-endian binary data from raw MNIST source files.",
-      "CNN Engineering: Engineered a sequential model featuring Conv2D and MaxPooling2D layers to achieve high-precision accuracy of over 99%.",
-      "Interactive Desktop Interface: Built a Tkinter GUI that allows users to draw digits on a digital canvas for live inference.",
-      "Advanced Evaluation: Implemented a Confusion Matrix visualization to identify specific digit-to-digit misclassifications.",
-      "Data Preprocessing Pipeline: Integrated real-time image resizing (280px to 28px) and normalization to match the training distribution.",
+      "Manual binary parsing of raw MNIST files",
+      "Custom CNN achieving >99% accuracy",
+      "Tkinter canvas GUI for live digit drawing",
+      "Confusion matrix for misclassification analysis",
+      "Real-time image resizing and normalization",
     ],
     analysisUrl: "#",
     dashboardUrl: "#",
@@ -70,14 +70,14 @@ const projects = [
     name: "SentinelSMS - \"Ham or Spam\" Classifier",
     code: "ML_03",
     dateTag: "Feb 2026",
-    subtitle: "An end-to-end NLP application featuring a custom-trained Multinomial Naive Bayes model and a Streamlit-based web interface for real-time message classification.",
+    subtitle: "NLP pipeline with a Naive Bayes classifier and Streamlit UI for real-time Ham/Spam detection.",
     dataset: "SMS Spam Collection (CSV)",
-    datasetDescription: "Contains 5,574 messages tagged as Ham (0) or Spam (1).",
+    datasetDescription: "5,574 messages labeled as Ham (0) or Spam (1).",
     model: "Multinomial Naive Bayes (MNB)",
     modelLabel: "MODEL ARCHITECTURE",
     description: "End-to-end NLP application for real-time SMS classification.",
     longDescription:
-      "This project showcases a complete Natural Language Processing (NLP) pipeline designed to identify fraudulent text messages. By implementing TF-IDF Vectorization and a Multinomial Naive Bayes classifier, the system distinguishes between legitimate communications (\"Ham\") and malicious/marketing content (\"Spam\") with high precision.",
+      "Full NLP pipeline using TF-IDF Vectorization and Multinomial Naive Bayes to classify SMS messages as Ham or Spam with high precision.",
     metrics: [
       { label: "Overall Accuracy", value: "97%", tooltip: "Model accuracy on test set" },
       { label: "Spam Precision", value: "100%", tooltip: "Zero false positives in testing" },
@@ -86,11 +86,11 @@ const projects = [
     metricsLabel: "Performance Metrics",
     technologies: ["Python", "Scikit-Learn", "Streamlit", "Pandas", "Joblib", "Google Colab"],
     features: [
-      "Custom Scikit-Learn Pipeline: Engineered a streamlined Pipeline that bundles the TfidfVectorizer and MultinomialNB into a single serializable object, ensuring zero data leakage.",
-      "Intelligent Text Vectorization: Implemented TF-IDF to mathematically weight terms, effectively filtering out common English stop-words to focus on scam-specific patterns.",
-      "Robust Data Preprocessing: Managed raw dataset challenges by implementing latin-1 encoding and custom mapping to transform categorical labels into binary integers.",
-      "Deterministic Training: Utilized a random_state of 42 for a 20% test-split, ensuring that the model's high performance is reproducible and verifiable.",
-      "Probabilistic Inference UI: Developed a real-time web interface where users can receive instant 'Confidence Scores', showing the mathematical probability behind every classification.",
+      "Scikit-Learn Pipeline with zero data leakage",
+      "TF-IDF vectorization with stop-word filtering",
+      "Raw dataset cleaning and label encoding",
+      "Reproducible 80/20 train-test split",
+      "Streamlit UI with real-time confidence scores",
     ],
     analysisUrl: "#",
     dashboardUrl: "#",
@@ -126,8 +126,7 @@ export function ProjectsSection() {
             Machine Learning Projects
           </h2>
           <p className="max-w-2xl text-muted-foreground">
-            A collection of production-ready machine learning implementations spanning
-            computer vision, natural language processing, and time series analysis.
+            Production-ready ML projects spanning computer vision and natural language processing.
           </p>
         </motion.div>
 
